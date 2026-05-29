@@ -1,0 +1,178 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, sans-serif;
+  background: #eef1f4;
+  color: #17202a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #17202a;
+  color: #f8fafc;
+  padding: 24px 18px;
+  border-right: 1px solid #0f1720;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtle {
+  color: #98a2b3;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.nav-list {
+  display: grid;
+  gap: 6px;
+  margin-top: 28px;
+}
+
+.nav-list a {
+  border-radius: 6px;
+  color: #d7dde5;
+  padding: 10px 12px;
+}
+
+.nav-list a:hover {
+  background: #223042;
+  color: #ffffff;
+}
+
+.content-shell {
+  min-width: 0;
+}
+
+.page {
+  padding: 28px;
+}
+
+.page-header {
+  margin-bottom: 22px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.page-header p {
+  color: #52606d;
+  margin: 8px 0 0;
+  max-width: 860px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d8dee6;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.metric-grid,
+.filter-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.metric {
+  background: #ffffff;
+  border: 1px solid #d8dee6;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.metric-label,
+label {
+  color: #52606d;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.metric-value {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+input,
+select {
+  border: 1px solid #c7d0da;
+  border-radius: 6px;
+  font: inherit;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid #d8dee6;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: #52606d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.empty-state {
+  color: #52606d;
+  padding: 28px;
+  text-align: center;
+}
+
+.map-canvas {
+  border: 1px solid #c7d0da;
+  border-radius: 8px;
+  height: 620px;
+  overflow: hidden;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    padding: 18px;
+  }
+
+  .nav-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .page {
+    padding: 20px;
+  }
+}
